@@ -1,0 +1,23 @@
+class Student:
+	#stu_n passed in as self & attruibutes set
+	def __init__(self, first, last, degreeProgram):
+		self.first = first
+		self.last = last
+		self.degreeProgram = degreeProgram
+		self.email = first + '.' + last + '@school.edu'
+
+	#print full name 
+	def fullname(self):
+		curly braces placeholder for positional arguments
+		return '{} {}'.format(self.first, self.last)
+
+stu_1 = Student('Ken', 'Clark', 'Biology')
+stu_2 = Student('Sam', 'Smith', 'Film')
+
+print (stu_1.email)
+
+#method call doesn't need to pass self or instance
+print(stu_1.fullname())
+
+#alternate way to call method on class, do have to pass instance 
+print(Student.fullname(stu_1))
